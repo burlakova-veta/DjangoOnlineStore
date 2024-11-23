@@ -1,0 +1,23 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+    <p>{{ title }}</p>
+    {% if product %}
+        {% for el in product %}
+            <div class="between-prod">
+                <a href="{{ el.id }}">
+                    <img src="{{ el.image.url }}">
+                </a>
+                <div class="cart">
+                    <a href="{{ el.id }}" class="prod_big">{{ el.title }}</a>
+                    <p class="prod_medium">{{ el.full_text|truncatechars:225 }}</p>
+                    <p class="price">{{ el.price }} <i class="fa-solid fa-ruble-sign" style="color: green;"></i></p>
+                </div>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p class="basic">Продукты не добавлены!</p>
+    {% endif %}
+{% endblock %}

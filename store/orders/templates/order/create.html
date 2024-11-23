@@ -1,0 +1,28 @@
+{% extends 'products/shop.html' %}
+
+{% block title %}Оформление{% endblock %}
+
+{% block content %}
+    <p>Оформление</p>
+    <div class="order">
+        <form method="post" class="order-form">
+            <div class="form-li">
+                {{ form.as_p }}
+                <p class="btn-order"><input type="submit" value="Оформить заказ"></p>
+                {% csrf_token %}
+            </div>
+        </form>
+        <div class="order-info">
+            <h4>Ваш заказ</h4>
+            <ul>
+                {% for item in cart %}
+                <li>
+                    {{ item.quantity }} x {{ item.product.title }}
+                    <span>{{ item.total_price }} <i class="fa-solid fa-ruble-sign"></i></span>
+                </li>
+                {% endfor %}
+            </ul>
+            <p>Итого: {{cart.get_total_price }} <i class="fa-solid fa-ruble-sign"></i></p>
+        </div>
+    </div>
+{% endblock %}

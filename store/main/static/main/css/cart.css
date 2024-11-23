@@ -1,0 +1,70 @@
+.button-light {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #abd5b1;
+    color: #333;
+    font-size: 19px;
+    text-decoration: none;
+    border-radius: 12px;
+}
+
+.button-light:hover {
+    background-color: green;
+    color: #eee;
+}
+
+.image-in-cart {
+    max-width: 60%;
+    max-height: 60%;
+}
+
+.table-cart {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 40px;
+}
+
+.table-cart th {
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.table-cart tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.table-cart td {
+    padding: 10px;
+}
+
+.title-table {
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.total {
+    font-weight: bold;
+}
+
+.total td {
+    padding: 10px 2%;
+}
+
+.num {
+    text-align: right;
+}
+
+.prod td {
+    width: 17%;
+    text-align: center;
+}
+
+input[type="submit"] {
+    border-radius: 10px;
+    background-color: #abd5b1;
+    border: 1px;
+    width: 30%;
+}

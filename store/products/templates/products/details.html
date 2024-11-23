@@ -1,0 +1,19 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}{{ product.title }}{% endblock %}
+
+{% block content %}
+    <h2>Карточка товара {{ product.title }}</h2>
+    <div class="prod-detail">
+        <img src="{{ product.image.url }}">
+        <div class="cart-detail">
+            <p class="price">{{ product.price }} <i class="fa-solid fa-ruble-sign" style="color: green;"></i></p>
+            <form action="{% url 'cart:cart_add' product.id %}" method="post" class="form_quentity">
+                {{ cart_product_form }}
+                {% csrf_token %}
+                <input type="submit" class="btn btn-outline-success" value="Добавить в корзину">
+            </form>
+            <p class="prod_medium">{{ product.full_text|linebreaksbr }}</p>
+        </div>
+    </div>
+{% endblock %}

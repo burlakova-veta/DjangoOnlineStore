@@ -1,0 +1,39 @@
+.order-form, .order-info {
+    display: inline-block;
+    width: 40%;
+    margin: 0 10%;
+}
+
+.order-info {
+    background-color: #f9f9f9;
+    border-bottom: 5px solid green;
+}
+
+.order {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.order-form input, .order-form label {
+    font-size: 20px;
+}
+
+.order-form p{
+    padding: 5px 0px 5px;
+}
+
+.order-info p {
+    font-size: 20px;
+    text-align: right;
+}
+
+.order-info h4 {
+    text-align: center;
+    padding: 5px;
+}
+
+.order-info ul li {
+    display: block;
+}
