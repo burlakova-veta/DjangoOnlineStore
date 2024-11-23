@@ -1,21 +1,30 @@
 * {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: auto;
     margin: 0px;
     padding: 0px;
 }
 
-layout {
+.layout {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100vh;
+    min-height: calc(100vh - 200px);
+}
+
+main {
+    flex-grow: 1;
 }
 
 footer {
     background-color: #EAEDE2;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    height: auto;
+    margin-top: auto;
+    height: 200px;
+    padding: 20px;
 }
 
 .content {
@@ -352,4 +361,8 @@ h1 {
     text-align: center;
     text-decoration: none;
     margin: 5% auto 0px;
+}
+
+.null {
+    font-size: 24px;
 }
