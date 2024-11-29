@@ -10,9 +10,9 @@ DEBUG = True
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', '0.0.0.0']
 
 INSTALLED_APPS = [
-    'main',
-    'products',
-    'orders',
+    'main.apps.MainConfig',
+    'products.apps.ProductsConfig',
+    'orders.apps.OrdersConfig',
     'cart.apps.CartConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -94,8 +94,3 @@ STATIC_ROOT = os.path.join(BASE_DIR, '/staticfiles')
 MEDIA_URL = '/media/'
 MEDIA_DIR = BASE_DIR / ''
 MEDIA_ROOT = MEDIA_DIR
-
-REST_FRAMEWORK = {
-    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 12
-}

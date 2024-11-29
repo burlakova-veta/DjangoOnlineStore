@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from .models import Order, OrderItem
 from .forms import OrderCreateForm
 from .serializers import OrderSerializer, OrderItemSerializer
-from cart.cart import Cart
+from cart.models import Cart
 from rest_framework.viewsets import ModelViewSet
 from rest_framework.response import Response
 
